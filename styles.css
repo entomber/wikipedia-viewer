@@ -1,0 +1,186 @@
+/*
+Search bar thanks to 
+https://webdesign.tutsplus.com/tutorials/css-experiments-with-a-search-form-input-and-button--cms-22069
+*/
+
+html, body {
+  margin-top: 20px;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  background: #425166;
+}
+
+#content {
+	margin: 0 auto;
+	text-align: center;
+}
+
+#content > div:empty { /* do not display element if empty */
+	display: none;
+}
+
+#content > div:last-child {
+	padding-bottom: 0;
+}
+
+#results-container {
+	width: 75%;
+	margin: 0 auto;
+	padding-bottom: 10px;
+}
+
+#search-container {
+	margin: 0 auto;
+	width: 300px;
+	height: 50px;
+	vertical-align: middle;
+	white-space: nowrap;
+	position: relative;
+}
+
+#navigation-container {
+	padding-bottom: 25px;
+}
+
+#search-input {
+	width: 300px;
+	height: 50px;
+	background: #2A2933;
+	border: none;
+	font-size: 10pt;
+	float: left;
+	color: #262626;
+	padding-left: 55px;
+	padding-right: 30px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	color: #FFF;
+}
+
+#search-input::-webkit-input-placeholder {color: #889AB3;}
+#search-input:-moz-placeholder {color: #889AB3;} /* Firefox 18- */
+#search-input::-moz-placeholder {color: #889AB3;} /* Firefox 19+ */
+#search-input:-ms-input-placeholder {color: #889AB3;}
+
+#icon {
+	position: absolute;
+	left: 0%;
+	margin-left: 15px;
+	margin-top: 11px;
+	z-index: 1;
+	color: #596575;
+
+	-webkit-transition: all .55s ease;
+	-moz-transition: all .55s ease;
+	-ms-transition: all .55s ease;
+	-o-transition: all .55s ease;
+	transition: all .55s ease;
+}
+
+#search-input:focus, 
+#search-input:active {
+	outline:none;
+}
+
+#search-container:hover #icon {
+	color: #AFC6E6;
+
+	-webkit-transform: scale(1.5); /* Safari and Chrome */
+	-moz-transform: scale(1.5); /* Firefox */
+	-ms-transform: scale(1.5); /* IE 9 */
+	-o-transform: scale(1.5); /* Opera */
+	transform: scale(1.5);
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+#clear {
+	position: relative;
+	left: -30px;
+	top: 10px;
+}
+
+#results-position {
+	text-align: left;
+	color: white;
+	font-size: 16px;
+	font-weight: normal;
+	margin-top: 0;
+}
+
+#results-position > span {
+	font-weight: bold;
+}
+
+.search-result {
+	text-align: left;
+	padding: 20px;
+	margin-bottom: 20px;
+	list-style: none;
+	background-color: #D6D8F0;
+	opacity: 0;
+
+	-webkit-transition: opacity 0.55s ease;
+	-moz-transition: opacity 0.55s ease;
+	-ms-transition: opacity 0.55s ease;
+	-o-transition: opacity 0.55s ease;
+	transition: opacity 0.55s ease;
+}
+
+.padding-bottom {
+	padding-bottom: 25px;
+}
+
+.search-result p {
+	color: #252B36;
+}
+
+.search-result:last-child {
+	margin-bottom: 0;
+}
+
+.search-result:hover {
+	background-color: #FFFFFF;
+}
+
+.title, .snippet, .none {
+	padding: 0;
+	margin: 0;
+}
+
+.snippet {
+	margin-top: 10px;
+}
+
+.snippet:empty {
+	margin-top: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+#random-container a, .title {
+	font-size: 18px;
+}
+.snippet, #by-line {
+	font-size: 14px;
+}
+
+#navigation-container {
+	color: #FFFFFF;
+}
+
+#navigation-container a {
+	margin: 0 10px 0 10px;
+	display: inline-block;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Wikipedia Viewer - Jeff Yang</title>
+		<link rel="stylesheet" href="styles.css?v=1.0">
+		<!-- <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> -->
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="container">
+			<div id="content">
+				<div id="search-container">
+					<form action="#" id="search">
+						<span id="icon"><i class="fa fa-search"></i></span>
+						<input id="search-input" type="search" placeholder="Search..." autocomplete="off"/>
+						<a href="#" id="clear" style="display: none"><i class="fa fa-times"></i></a>
+					</form>
+				</div>
+				<div id="random-container">
+					<a href="http://en.wikipedia.org/wiki/Special:Random" target="_blank">View random article</a>
+				</div>
+				<div id="results-container">
+					<p id="results-position" style="display: none"><span id="page-min"></span> - <span id="page-max"></span> of <span id="total-items"></span></p>
+					<div id="results-list"></div>
+				</div>
+				<div id="navigation-container">
+						<a href="#" id="previous" style="display: none"><i class="fa fa-chevron-left fa-lg"></i></a>
+						<a href="#" id="next" style="display: none"><i class="fa fa-chevron-right fa-lg"></i></a>
+				</div>
+				<div id="by-line">
+						<a href="../Portfolio/portfolio.html" id="by">by Jeff Yang</a>
+				</div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
